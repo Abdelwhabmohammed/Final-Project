@@ -1,0 +1,28 @@
+<!-- Include layout file conteent -->
+{% extends "layout.html" %}
+
+{% block title %}
+    Contacts
+{% endblock %}
+
+{% block main %}
+    <h1>Contact List</h1>
+    <table id="contactTable">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Second Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="contacttable">
+            <!-- Contacts will be displayed here by JS file -->
+        </tbody>
+    </table>
+
+    <!-- Link the js file -->
+    <script src="/static/contacts.js"></script>
+{% endblock %}

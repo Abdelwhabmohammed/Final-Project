@@ -1,0 +1,30 @@
+<!--include layout file content-->
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}    
+    <h1>Contact List</h1>
+    <!--Create a form to get dat from the user -->
+    <form id="contactForm">
+        <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+        <input type="text" name="secondname" id="secondname" placeholder="Second Name">
+
+        <!--GEt the phone number as text as the user may add '+' or equivalent signs-->
+        <input type="text" name="phone" id="phone" placeholder="Phone Number" required>
+        <input type="email" name="email" id="email" placeholder="Email">
+        
+        <!--Make a select list of categories-->
+        <select name="category" id="category" required>
+            <option value="family">Family</option>
+            <option value="work">Work</option>
+            <option value="friends">Friends</option>
+        </select>
+        <button type="submit">Add Contact</button>
+    </form>
+    
+    <!-- Link the js file-->
+    <script src="/static/application.js"></script>
+{% endblock %}

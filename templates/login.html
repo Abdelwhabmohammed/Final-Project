@@ -1,0 +1,20 @@
+<!--include layout file content-->
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <h1>Login</h1>
+
+    <!-- Create a form to get the data-->
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+    
+    <!-- Put a Register link for new users -->
+    <a href="/register">Register</a>
+{% endblock %}
